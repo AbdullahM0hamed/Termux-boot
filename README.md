@@ -6,3 +6,5 @@ For this to work the code in the boot-termux file must run on boot. If you have 
 
 The termux-url-opener file must be placed in ~/bin/termux-url-opener (use chmod +x to make it executable). 
 If you already using termux-url-opener rename it to termux-url-opener-2 and all links that do not begin with TermuxLauncher.xyz will be redirected to it. 
+
+Requires the tmux package to be installed. 
