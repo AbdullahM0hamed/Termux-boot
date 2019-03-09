@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+#The code sleeps for 5 minutes as the intent doesn't work immediately after boot. 
 sleep 300
 am start -a android.intent.action.SEND --es android.intent.extra.TEXT TermuxLauncher.xyz -t text/plain com.termux
