@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ "$(echo $@ | awk '/^TermuxLauncher.xyz/')" != "" ]
+then
+  if [ "$(echo $@ | sed -e 's/[^0-9]*//g')" == "" ]
+  then
+    for script in $(ls /data/data/com.termux/files/home/boot | nl | sed -e 's/[^0-9]*//g')
+    do
+      am start -a android.intent.action.SEND --es android.intent.extra.TEXT TermuxLauncher.xyz/$script -t text/plain com.termux
+    done
+  else
+    script=$(ls /data/data/com.termux/files/home/boot | head -n$(echo $@ | sed -e 's/[^0-9]*//g') | tail -1)
+    tmux new-session -d -s "boot$script" "tsudo bash -c /data/data/com.termux/files/home/boot/$script; bash"
+    tmux attach-session -t "boot$script"
+  fi
+else
+  /data/data/com.termux/files/home/bin/termux-url-opener-2 "$@"
+fi

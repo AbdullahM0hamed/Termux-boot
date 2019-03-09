@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+sleep 300
+am start -a android.intent.action.SEND --es android.intent.extra.TEXT TermuxLauncher.xyz -t text/plain com.termux
