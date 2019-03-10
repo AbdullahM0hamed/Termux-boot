@@ -10,6 +10,7 @@ then
     done
   else
     script=$(ls /data/data/com.termux/files/home/boot | head -n$(echo $@ | sed -e 's/[^0-9]*//g') | tail -1)
+    echo -ne "\033]0;$script\007"
     tsudo bash -c /data/data/com.termux/files/home/boot/"$script"
     bash
   fi
