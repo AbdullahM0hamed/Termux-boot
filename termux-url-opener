@@ -10,8 +10,8 @@ then
     done
   else
     script=$(ls /data/data/com.termux/files/home/boot | head -n$(echo $@ | sed -e 's/[^0-9]*//g') | tail -1)
-    tmux new-session -d -s "boot$script" "tsudo bash -c /data/data/com.termux/files/home/boot/$script; bash"
-    tmux attach-session -t "boot$script"
+    tsudo bash -c /data/data/com.termux/files/home/boot/"$script"
+    bash
   fi
 else
   /data/data/com.termux/files/home/bin/termux-url-opener-2 "$@"
