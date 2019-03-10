@@ -9,9 +9,9 @@ If you are already using termux-url-opener rename it to termux-url-opener-2 and 
 
 
 To install from termux-url-opener :
-$ wget -P ~/bin https://github.com/DaBoss5/Termux-boot/raw/master/termux-url-opener
-$ chmod +x ~/bin/termux-url-opener 
+wget -P ~/bin https://github.com/DaBoss5/Termux-boot/raw/master/termux-url-opener
+chmod +x ~/bin/termux-url-opener 
 
 To install boot-termux (for magisk users):
-$ wget -P /magisk/.core/service.d https://github.com/DaBoss5/Termux-boot/raw/master/boot-termux
-$ chmod +x /magisk/.core/service.d/boot-termux
+wget -P /magisk/.core/service.d https://github.com/DaBoss5/Termux-boot/raw/master/boot-termux
+chmod +x /magisk/.core/service.d/boot-termux
