@@ -8,3 +8,10 @@ The termux-url-opener file must be placed in ~/bin/termux-url-opener (use chmod 
 If you are already using termux-url-opener rename it to termux-url-opener-2 and all links that do not begin with TermuxLauncher.xyz will be redirected to it. 
 
 
+To install from termux-url-opener :
+$ wget -P ~/bin https://github.com/DaBoss5/Termux-boot/raw/master/termux-url-opener
+$ chmod +x ~/bin/termux-url-opener 
+
+To install boot-termux (for magisk users):
+$ wget -P /magisk/.core/service.d https://github.com/DaBoss5/Termux-boot/raw/master/boot-termux
+$ chmod +x /magisk/.core/service.d/boot-termux
